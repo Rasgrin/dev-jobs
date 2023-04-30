@@ -19,7 +19,7 @@ const Footer = () => {
             <a href="https://www.linkedin.com/in/stefanrogic/" target="_blank">
               LinkedIn
             </a>
-            <a href="#">Portfolio</a>
+            <a href="https://stefan-rogic.netlify.app">Portfolio</a>
           </div>
         </>
       )}
