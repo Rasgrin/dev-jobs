@@ -1,0 +1,149 @@
+@import "../../index.scss";
+
+.job-description {
+  @include themify($themes) {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    padding: 100px;
+
+    border-radius: 10px;
+
+    background-color: themed("cards");
+
+    @include mobile {
+      padding: 30px;
+      margin-bottom: 25px;
+    }
+
+    @include tablet {
+      padding: 50px;
+    }
+
+    @include desktop {
+      padding: 100px;
+      margin-bottom: 60px;
+    }
+
+    .job-title {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .top {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        gap: 20px;
+
+        color: themed("textTwo");
+
+        p {
+          margin: 0;
+
+          @include mobile {
+            font-size: 15px;
+          }
+
+          @include tablet {
+            font-size: 20px;
+          }
+        }
+      }
+
+      .middle {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        h1 {
+          margin: 0;
+
+          color: themed("textOne");
+
+          @include mobile {
+            font-size: 35px;
+          }
+
+          @include tablet {
+            font-size: 50px;
+          }
+        }
+
+        button {
+          width: 200px;
+          height: 70px;
+          border: none;
+          font-size: 20px;
+          font-weight: 500;
+          border-radius: 10px;
+          color: white;
+          cursor: pointer;
+
+          color: themed("buttonText");
+          background-color: themed("button");
+
+          &:hover {
+            background-color: themed("buttonHover");
+          }
+
+          @include mobile {
+            display: none;
+          }
+
+          @include tablet {
+            display: block;
+          }
+        }
+      }
+
+      .bottom {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+
+        h2 {
+          margin: 0;
+          color: themed("textThree");
+        }
+      }
+    }
+
+    .job-about {
+      display: flex;
+      flex-direction: column;
+
+      @include mobile {
+        font-size: 15px;
+      }
+
+      @include tablet {
+        font-size: 20px;
+      }
+
+      p {
+        margin: 0;
+        line-height: 35px;
+
+        color: themed("textTwo");
+      }
+
+      h2 {
+        margin: 60px 0 20px 0;
+        color: themed("textOne");
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin: 0;
+
+        li {
+          color: themed("textTwo");
+        }
+      }
+    }
+  }
+}

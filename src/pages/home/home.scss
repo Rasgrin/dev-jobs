@@ -1,0 +1,101 @@
+@import "../../index.scss";
+
+.home {
+  @include themify($themes) {
+    max-width: 1280px;
+    display: flex;
+    flex-direction: column;
+
+    @include rwd("0px") {
+      margin: 0 25px;
+    }
+
+    @include desktop {
+      margin: 0 auto;
+    }
+
+    .results {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin: 60px 0 0 0;
+
+      h2 {
+        color: themed("textOne");
+        margin: 0;
+      }
+
+      button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        margin: 0 0 0 auto;
+        padding: 5px 30px;
+        font-size: 14px;
+        border-radius: 30px;
+        width: auto;
+        background-color: themed("button");
+
+        &:hover {
+          background-color: themed("button");
+        }
+      }
+    }
+
+    .search-results {
+      // width: 100%;
+
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: start;
+
+      @include tablet {
+        gap: 2%;
+      }
+
+      .not-found {
+        width: 100%;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        color: themed("textOne");
+
+        p {
+          margin: 0;
+        }
+
+        svg {
+          height: 100px;
+          width: 100px;
+
+          color: themed("textThree");
+        }
+      }
+    }
+
+    button {
+      width: 200px;
+      height: 50px;
+      margin: auto;
+      border: none;
+      font-size: 17px;
+      font-weight: 500;
+      margin-top: 35px;
+      border-radius: 10px;
+      color: white;
+      cursor: pointer;
+
+      color: themed("buttonText");
+      background-color: themed("button");
+
+      &:hover {
+        background-color: themed("buttonHover");
+      }
+    }
+  }
+}
